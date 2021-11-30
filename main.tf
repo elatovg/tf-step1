@@ -1,6 +1,6 @@
 locals {
     project_id  = var.project_id
-    tf_sa_email = "user2-sa@${project_id}.iam.gserviceaccount.com"
+    tf_sa_email = "user2-sa@${local.project_id}.iam.gserviceaccount.com"
 }
 
 resource "vault_gcp_secret_static_account" "static_account" {
